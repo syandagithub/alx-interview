@@ -5,12 +5,11 @@
 def rotate_2d_matrix(matrix):
     """Rotates an n x n 2D matrix in place by 90 degrees clockwise.
     """
-
     n = len(matrix)
     if n != len(matrix[0]):
         raise ValueError("Matrix must be square")
 
-    # Rotate the matrix in place 
+    # Rotate the matrix in place
     for layer in range(n // 2):
         first = layer
         last = n - layer - 1
