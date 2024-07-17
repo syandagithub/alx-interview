@@ -4,6 +4,8 @@
 
 def rotate_2d_matrix(matrix):
     """Rotates an n x n 2D matrix in place by 90 degrees clockwise.
+    Args:
+         matrix (list[[list]]): a matrix
     """
     n = len(matrix)
     if n != len(matrix[0]):
