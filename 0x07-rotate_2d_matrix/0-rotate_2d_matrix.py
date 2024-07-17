@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Rotate 2D Matrix.
+"""
+Rotate 2D Matrix.
 """
 
 def rotate_2d_matrix(matrix):
@@ -12,7 +13,7 @@ def rotate_2d_matrix(matrix):
         raise ValueError("Matrix must be square")
 
     # Rotate the matrix in place
-    for layer in range(n / 2):
+    for layer in range(n // 2):
         first = layer
         last = n - layer - 1
         for i in range(first, last):
