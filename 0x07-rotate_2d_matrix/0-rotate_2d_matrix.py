@@ -9,17 +9,14 @@ def rotate_2d_matrix(matrix):
          matrix (list[[list]]): a matrix
     """
     n = len(matrix)
-    if n != len(matrix[0]):
-        raise ValueError("Matrix must be square")
-
-    # Rotate the matrix in place
-    for layer in range(n // 2):
-        first = layer
-        last = n - layer - 1
-        for i in range(first, last):
-            offset = i - first
-            top = matrix[first][i]
-            matrix[first][i] = matrix[last - offset][first]
-            matrix[last - offset][first] = matrix[last][last - offset]
-            matrix[last][last - offset] = matrix[i][last]
-            matrix[i][last] = top
+    i   n = len(matrix)
+    for i in range(int(n / 2)):
+        y = (n - i - 1)
+        for j in range(i, y):
+            x = (n - 1 - j)
+            
+            tmp = matrix[i][j]
+            matrix[i][j] = matrix[x][i]
+            matrix[x][i] = matrix[y][x]
+            matrix[y][x] = matrix[j][y]
+            matrix[j][y] = tmp
