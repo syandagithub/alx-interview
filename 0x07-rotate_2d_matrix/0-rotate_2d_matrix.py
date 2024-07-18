@@ -9,7 +9,7 @@ def rotate_2d_matrix(matrix):
          matrix (list[[list]]): a matrix
     """
     n = len(matrix)
-    i   n = len(matrix)
+    
     for i in range(int(n / 2)):
         y = (n - i - 1)
         for j in range(i, y):
